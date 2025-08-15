@@ -17,15 +17,12 @@ const app = express();
 
 const port = process.env.PORT;
 
-//using middlewares
 app.use(express.json());
 app.use(cookieParser());
 
-// importing routes
 import userRoutes from "./routes/userRoutes.js";
 import pinRoutes from "./routes/pinRoutes.js";
 
-// using routes
 app.use("/api/user", userRoutes);
 app.use("/api/pin", pinRoutes);
 
